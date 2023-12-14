@@ -1,0 +1,13 @@
+diff --git a/FileWatch.hpp b/FileWatch.hpp
+index 4eba08b..e60b03e 100644
+--- a/FileWatch.hpp
++++ b/FileWatch.hpp
+@@ -622,7 +622,7 @@ namespace filewatch {
+ 				const auto length = read(_directory.folder, static_cast<void*>(buffer.data()), buffer.size());
+ 				if (length > 0) 
+ 				{
+-					int i = 0;
++					ssize_t i = 0;
+ 					std::vector<std::pair<StringType, Event>> parsed_information;
+ 					while (i < length) 
+ 					{

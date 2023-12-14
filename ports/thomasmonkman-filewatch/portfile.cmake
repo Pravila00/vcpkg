@@ -6,6 +6,7 @@ vcpkg_from_github(
     HEAD_REF master
     PATCHES
         fix-unix-listen.patch
+        fix-warning-loop.patch
 )
 
 file(COPY "${SOURCE_PATH}/FileWatch.hpp" DESTINATION "${CURRENT_PACKAGES_DIR}/include/thomasmonkman-filewatch")
